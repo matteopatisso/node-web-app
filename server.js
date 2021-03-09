@@ -5,7 +5,7 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-	fetch('http://viac-invest-hello-world-server:4000')
+	fetch(process.env['SERVER_URL'])
 	  .then(response => response.json())
 	  .then(json => res.json(json))
 })
@@ -19,7 +19,7 @@ app.get('/status', (req, res) => {
 })
 
 app.get('/env', (req, res) => {
-	res.json(process.env);
+	res.json(process.env['SERVER_URL']);
 })
 
 app.listen(port, () => {
