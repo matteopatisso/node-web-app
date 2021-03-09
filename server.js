@@ -5,7 +5,7 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-	fetch('http://viac-invest-hello-world-server-viac-invest-openshift-test.apps.oso3.safeswisscloud.ch')
+	fetch('http://viac-invest-hello-world-server:4000')
 	  .then(response => response.json())
 	  .then(json => res.json(json))
 })
