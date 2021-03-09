@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/status', (req, res) => {
 	res.json({
-		status: 'UP'
+		status: 'UP',
 		version: '0.0.1'
 	})
 })
