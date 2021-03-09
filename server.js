@@ -19,7 +19,10 @@ app.get('/status', (req, res) => {
 })
 
 app.get('/env', (req, res) => {
-	res.json(process.env['SERVER_URL']);
+	res.json({
+		serverUrl: process.env['SERVER_URL'],
+		propertyOne: process.env['PROPERTY_ONE']
+	});
 })
 
 app.listen(port, () => {
