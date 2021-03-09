@@ -5,7 +5,7 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-	fetch('https://jsonplaceholder.typicode.com/todos/1')
+	fetch('viac-invest-hello-world-server:4000')
 	  .then(response => response.json())
 	  .then(json => res.json(json))
 })
