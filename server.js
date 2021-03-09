@@ -10,6 +10,14 @@ app.get('/', (req, res) => {
 	  .then(json => res.json(json))
 })
 
+
+app.get('/status', (req, res) => {
+	res.json({
+		status: 'UP'
+		version: '0.0.1'
+	})
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
