@@ -14,8 +14,12 @@ app.get('/', (req, res) => {
 app.get('/status', (req, res) => {
 	res.json({
 		status: 'UP',
-		version: '0.0.1'
+		version: '0.0.2'
 	})
+})
+
+app.get('/env', (req, res) => {
+	res.json(process.env);
 })
 
 app.listen(port, () => {
